@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sébastien Kerleau's webpage">
+  <title>Sébastien Kerleau</title>
+  <link rel="stylesheet" href="pageperso.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="icon" href="logo.png" />
+</head>
+<body>
+    <div class="sidebar">
+        <a href="index.html" style="font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Home</a>  
+        <a href="teaching.html" style="font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Teaching</a>
+        <a href="curriculum.html" style="font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Curriculum</a>
+        <a href="work.html" style="font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Work</a>
+        <a href="#miscellaneous" style="font-weight: bold; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Miscellaneous</a>
+        <a href="mailto:sebastien.kerleau@lamsade.dauphine.fr" style="display: flex; align-items: center;">
+          <img src="envelope.png" alt="envelope logo" style="width: 15px; height: auto; margin-right: 5px;">
+          <span class="small" style="font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">sebastien.kerleau@lamsade.dauphine.fr</span>
+      </a>
+          
+        <a href="https://www.campusmap.fr/map/dauphine-paris?place=c603-bis" style="display: flex; align-items: center;">
+          <img src="desk.png" alt="desk logo" style="width: 15px; height: auto; margin-right: 5px;">
+          <span class="small" style="font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">C603bis (6th floor)</span>
+      </a>
+    
+      </div>
+
+    <div class="content">
+      <div class="image-container">
+        <img src="sebprofile.jpg" class="left-image" style="border-radius:30%; width: 20%;">
+        <img src="logodauphine.png" class="center-image" style="width: 40%;">
+    </div></br> </br>
+          <h1 class="text-to-tilt">About me:</h1>
+        I am a third year PhD student in computer science at <a href="https://www.lamsade.dauphine.fr/" style="color: white" target="_blank"> Université Paris Dauphine PSL</a>. 
+        My work, done under the supervision of 
+        <a href="https://www.lamsade.dauphine.fr/~cornaz/index.html" style="color: white" target="_blank"> Denis Cornaz</a>
+         and 
+        <a href="https://www.lamsade.dauphine.fr/~croyer/teach.html" style="color: white" target="_blank"> Clément Royer</a>, 
+        revolves around linear algebra.<br> 
+        More precisely, I study the properties of positive spanning sets. Using arguments from graph theory, 
+        I analyze their structure and look for new ways to use such sets in derivative free algorithms. <br>
+        For more informations on any specific topic, <a href="https://www.youtube.com/watch?v=KNKgBBn_Fsg&t=50s" style="text-decoration: none;">click</a>
+        any link on the sidebar. </br></br>
+        <h1 class="text-to-tilt">About my thesis:</h1>
+        Consider a function <b>f</b> that one needs to minimize. Assuming that a derivative exists, 
+        gradient descent algorithms are usually applied, yet it may happen that information on the derivative of the function 
+        is unavailable or takes a significant amount of time to be obtained. Such scenarios led researchers to creating 
+        derivative-free optimization (DFO) algorithms. An emblematic case is given by the direct-search methods.
+        Starting from a candidate <span class="latex">\(\mathbf{x}\)</span>  for being the minimizer, the basic idea is to sample the objective function at a 
+        finite number of points <span class="latex">\(\mathbf{x_1},\dots,\mathbf{x_s}\)</span> 
+        around <span class="latex">\(\mathbf{x}\)</span> at each iteration. Each point <span class="latex">\(\mathbf{x_i}\)</span> 
+        is expressed as <span class="latex">\(\mathbf{x_i}=\mathbf{x}+\lambda\mathbf{v_i}\)</span> for some 
+        vector <span class="latex">\(\mathbf{v_i} \in \mathbb{R}^n\)</span> and some parameter 
+        <span class="latex">\(\lambda \in \mathbb{R}_+ \)</span>.
+        Depending on these sampled values, the value of <span class="latex">\(\mathbf{x}\)</span> might be changed at the next iteration. 
+        Assuming that the vectors 
+        <span class="latex">\(\mathbf{v_1},\dots,\mathbf{v_s} \)</span> are 'well spread' in the space,
+        the sampled points are sufficiently dispersed around <span class="latex">\(\mathbf{x}\)</span> at each iteration 
+        and the algorithm should converge ! </br></br>
+
+        Positive spanning sets (PSSs) can be defined as families of vectors able to span the Euclidian space through non-negative 
+        linear combinations (equivalently, through positive linear combinations).
+        Using  
+        <a href="https://en.wikipedia.org/wiki/Farkas%27_lemma#Statement_of_the_lemma" style="color: white" target="_blank"> 
+          Farkas' lemma</a>,
+        one can also define PSSs as families of vectors that are not contained in a same half-space. In other words, PSSs
+        can be defined as families whose elements are 'well spread' in the space ! </br> </br>
+        <b>Drag around the vectors below to create your favourite PSS in <span class="latex">\(\mathbb{R}^2\)</span> ! </b></br> </br>
+        <svg id="svgContainer" width="700" height="400">
+            <defs>
+              <marker id="arrowhead" markerWidth="10" markerHeight="7"
+                      refX="0" refY="3.5" orient="auto" fill="black">
+                <polygon points="0 0, 10 3.5, 0 7" />
+              </marker>
+            </defs>
+            <circle id="circle" class="invisible" cx="200" cy="200" r="100" stroke="black" stroke-width="2" fill="transparent" />
+            <line id="radius1" x1="200" y1="200" x2="300" y2="200" stroke="black" stroke-width="3" marker-end="url(#arrowhead)" />
+            <line id="radius2" x1="200" y1="200" x2="280" y2="260" stroke="black" stroke-width="3" marker-end="url(#arrowhead)" />
+            <line id="radius3" x1="200" y1="200" x2="200" y2="300" stroke="black" stroke-width="3" marker-end="url(#arrowhead)" />
+            <line id="radius4" x1="200" y1="200" x2="120" y2="260" stroke="black" stroke-width="3" marker-end="url(#arrowhead)" />
+            <!-- New vector V -->
+            <line id="vectorV" class="invisible" x1="200" y1="200" x2="300" y2="300" stroke="red" stroke-width="2" marker-end="url(#arrowhead)" />
+            <text id="pssCheck" x="450" y="200" fill="#1c1c8f" font-size="24">PSS</text>
+          </svg>
+          
+          <script src="pageperso.js"></script>
+        </br>
+        
+          All PSSs are not created equal: the speed of convergence of DFO algorithms will vary based on the collection of vectors given
+          as an input. In particular, the cosine measure of the PSS seems to be an important factor: 
+          start by finding a vector in <span class="latex">\(\mathbb{R}^n\)</span> whose angle with its closest neighbor in your family
+          is as large as possible. The cosine measure of the family is the cosine of this angle.
+          For instance, the family formed by the four vectors above has a cosine measure of <span id="cosHalfMValue">-0.3162</span>.<br>
+          Having a positive cosine measure is equivalent to being a PSS. Sets whose cosine measure is close to 1 are more popular
+          in DFO algorithms as, roughly speaking, their elements are 
+          extremely well spread in the space. <br>
+          Creating PSSs with a large cosine measure can be done trivially as it suffices to consider families with a
+          very large number of elements. In practice however, small PSSs are usually favoured in algorithms.
+          <br> Did you notice ?
+          A PSS of size 4 in <span class="latex">\(\mathbb{R}^2\)</span> is usually not inclusion-wise minimal: 
+          it contains a 'useless' vector which can be removed with no impact on the family's ability to positively
+          span the Euclidian space.
+          Inclusion-wise minimal PSSs are called positive bases.
+          <p style="text-align: center;"><i>What is the size of a positive basis in <span class="latex">\(\mathbb{R}^n\)</span>?</i></p>
+          Weirdly enough, although linear bases all share the same size, positive bases do not: in n-dimensional spaces, 
+          their size ranges from n+1 up to 2n !
+          Using the tool above, can you create a positive basis of size 4 in <span class="latex">\(\mathbb{R}^2\)</span> ? 
+          Can you prove that positive spanning sets of size 5 in <span class="latex">\(\mathbb{R}^2\)</span> 
+          can never be inclusion-wise minimal ?
+    </div>
+    
+</body>
+</html>

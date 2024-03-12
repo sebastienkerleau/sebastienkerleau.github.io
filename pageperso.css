@@ -1,0 +1,87 @@
+#svgContainer {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+  
+  .invisible {
+    display: none;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    color: rgb(255, 255, 255);
+}
+
+.sidebar {
+    height: 100%;
+    width: 22%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #e4c2b4;
+    padding-top: 20px;
+}
+.sidebar a { 
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000000;
+}
+.sidebar a:hover {
+    background-color: #cbb0b0;
+}
+.content {
+    line-height: 1.5;
+    margin-left: 22%;
+    font-family: 'PT Sans', sans-serif;
+    padding: 50px;
+    background-color: #9c9fec;
+
+}
+.blackboard {
+    font-family: "TeX Gyre Bonum", serif;
+    font-size: 18px; 
+}
+
+.latex {
+    color: rgb(255, 255, 255);
+  }
+
+  .small {
+    font-size: 13px;
+}
+@keyframes tilt {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-0.5deg); }
+    75% { transform: rotate(0.5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.text-to-tilt:hover {
+    animation: tilt 0.6s ease infinite;
+    cursor: pointer
+}
+.content a{color: white}
+
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%; /* Déplace l'image vers la droite */
+}
+
+.image-container img {
+    max-width: 100%; /* La largeur maximale de l'image est égale à 100% de la largeur de son conteneur */
+    height: auto; /* La hauteur est ajustée automatiquement pour conserver les proportions de l'image */
+    margin: 0 10px; /* Ajoute une marge autour des images pour l'espacement */
+}
+
+.left-image {
+    max-width: 50%; /* Définissez une largeur maximale en pourcentage pour l'image "sebprofile.jpg" */
+}

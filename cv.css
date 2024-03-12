@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    color: rgb(255, 255, 255);
+    overflow: hidden; /* Hide scroll bars */
+}
+
+.sidebar {
+    height: 100%;
+    width: 22%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #e4c2b4;
+    padding-top: 20px;
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.sidebar a { 
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.sidebar a:hover {
+    background-color: #cbb0b0;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 22%; /* Width of the sidebar */
+    bottom: 0;
+    right: 0;
+    overflow: auto; /* Enable scrolling */
+    background-color: #9c9fec;
+}
+
+.full-screen-image {
+    max-width: 170%;
+    max-height: 170%;
+    margin: auto;
+    display: block;
+}
