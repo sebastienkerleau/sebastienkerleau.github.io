@@ -15,16 +15,21 @@
     font-family: 'Roboto', sans-serif;
     text-align: justify;
     color: rgb(255, 255, 255);
+
+    display:grid;
+    grid-template-columns: 250px auto;
+    width:100ù
 }
 
 .sidebar {
     height: 100%;
-    width: 22%;
+    /*width: 22%;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 0;*/
     background-color: #e4c2b4;
     padding-top: 20px;
+    padding-bottom:80px
 }
 .sidebar a { 
     display: block;
@@ -37,8 +42,9 @@
 }
 .content {
     line-height: 1.5;
-    margin-left: 22%;
+    /*margin-left: 22%;*/
     font-family: 'PT Sans', sans-serif;
+    height:100%;
     padding: 50px;
     background-color: #9c9fec;
 
@@ -83,5 +89,5 @@
 }
 
 .left-image {
-    max-width: 50%; /* Définissez une largeur maximale en pourcentage pour l'image "sebprofile.jpg" */
+    max-width: 70%; /* Définissez une largeur maximale en pourcentage pour l'image "sebprofile.jpg" */
 }
