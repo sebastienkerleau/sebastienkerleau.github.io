@@ -4,16 +4,20 @@ body {
     text-align: justify;
     color: rgb(255, 255, 255);
     overflow: hidden; /* Hide scroll bars */
+
+    display: grid;
+    grid-template-columns: 250px auto;
 }
 
 .sidebar {
     height: 100%;
-    width: 22%;
+    /*width: 22%;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 0;*/
     background-color: #e4c2b4;
     padding-top: 20px;
+    padding-bottom:80px;
     
 }
 
@@ -29,18 +33,23 @@ body {
 }
 
 .content {
-    position: absolute;
+   /* position: absolute;
     top: 0;
-    left: 22%; /* Width of the sidebar */
+    left: 22%; 
     bottom: 0;
-    right: 0;
+    right: 0; */
     overflow: auto; /* Enable scrolling */
     background-color: #9c9fec;
 }
 
 .full-screen-image {
-    max-width: 170%;
-    max-height: 170%;
+    
+    max-width: 90%;
+    /*max-height: 0%;*/
     margin: auto;
     display: block;
+}
+
+#cvcontainer{
+    height:140%;
 }
